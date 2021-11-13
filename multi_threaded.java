@@ -42,15 +42,13 @@ class ThreadsWorker implements Runnable {
 	@Override
 	public void run() {
 		try {
-			String data = readFileAsString(
-					"C:\\Users\\minis\\OneDrive - University of New Orleans\\Course Material\\CSCI 5401 OS\\Assignment 3\\Data\\TimeUse.csv");
+			String data = readFileAsString("File Location");
 			data = data.toLowerCase();
 			String pattern = "[a-zA-Z]{5,}+";
 			Pattern r = Pattern.compile(pattern);
 			Matcher m = r.matcher(data);
 			// call getFileName() and get FileName path object
-			Path path = Paths.get(
-					"C:\\Users\\minis\\OneDrive - University of New Orleans\\Course Material\\CSCI 5401 OS\\Assignment 3\\Data\\TimeUse.csv");
+			Path path = Paths.get("File_Location");
 			Path fileName = path.getFileName();
 			HashMap<String, Integer> map = new HashMap<>();
 			while (m.find()) {
