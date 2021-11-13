@@ -11,7 +11,7 @@ import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class PartA2 {
+public class multithreaded {
 
 	/**
 	 * @param args the command line arguments
